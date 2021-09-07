@@ -32,12 +32,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn btn-primary position-relative
-                        me-4" href="
-                        {{ route('login-form') }}">Login</a>
-                    <span class="position-absolute top-0 start-100 translate-middle">
-                        <span class="visually-hidden">New alerts</span>
-                    </span>
+                    <a class=" btn btn-primary position-relative me-4" href="{{ route('login') }}">Login</a>
                 </li>
             </ul>
             <form class="d-flex">

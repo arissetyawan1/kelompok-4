@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
+
+/* End of file Controllername.php */
+;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +21,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
+Route::get('dashboard', [DataController::class, 'index'])->name('dashboard');
 
 Route::view('login-form', 'login')->name('login-form');
 Route::view('index-html', 'index')->name('index');
