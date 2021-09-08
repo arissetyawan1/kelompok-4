@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PembelianController;
 
 
 /* End of file Controllername.php */
@@ -21,10 +23,17 @@ Route::get('/', function () {
     return view('home');
 });
 
+//BarangRoute
+Route::get('dashboard', [BarangController::class, 'index'])->name('dashboard');
+Route::view('form-insert', 'formInsertBarang')->name('insert-barang');
+Route::post('insert-barang', [BarangController::class, 'store'])->name('barang.insert');
+Route::delete('delete-barang/{id}',[BarangController::class, 'destroy'])->name('delete.barang');
+Route::get('edit-barang/{id}', [BarangController::class, 'edit'])->name('barang.edit');
+Route::put('update-barang/{id}', [BarangController::class, 'update'])->name('barang.update');
 
-Route::get('dashboard', [DataController::class, 'index'])->name('dashboard');
 
-Route::view('login-form', 'login')->name('login-form');
-Route::view('index-html', 'index')->name('index');
+
+//PembelianRoute
+Route::get('pembelian', [PembelianController::class, 'index'])->name('pembelian');
 require __DIR__.'/auth.php';
 
