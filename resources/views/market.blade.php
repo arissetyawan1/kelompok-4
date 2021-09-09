@@ -39,10 +39,10 @@
               <a class="nav-link" href="#">Bantuan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Daftar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+                 <form method="POST" action="{{route('logout')}}">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-danger">Logout</a>
+                </form>
             </li>
           </ul>
         </div>

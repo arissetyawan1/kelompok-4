@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 });
 
-
+Route::view('market', 'market')->name('market');
 //BarangRoute
 Route::get('dashboard', [BarangController::class, 'index'])->name('dashboard');
 Route::view('form-insert', 'formInsertBarang')->name('insert-barang');

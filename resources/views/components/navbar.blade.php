@@ -14,37 +14,35 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Market</a>
+              <a class="nav-link active" href="{{route('market')}}">Market</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Forum
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Diskusi</a></li>
+                <li><a class="dropdown-item" href="{{('')}}">Diskusi</a></li>
                 <li><a class="dropdown-item" href="#">Isu</a></li>
                 <li><a class="dropdown-item" href="#">Sedulur</a></li>
               </ul>
             </li>
-          @if (Auth::check() == true)
-          <li class="nav-item">
-              <form method="POST" action="{{route('logout')}}">
+            @if (Auth::check() == true)
+            <li class="nav-item">
+                <form method="POST" action="{{route('logout')}}">
                     @csrf
-                <button type="submit" class="btn btn-sm btn-danger">Logout</a>
-              </form>
-          </li>
+                    <button type="submit" class="btn btn-sm btn-danger">Logout</a>
+                </form>
 
-          @else
-          <li class="nav-item">
-              <button type="button" class="btn position-relative btn-primary ms-2">
-                <a href="{{ route('login') }}" class="login">Login</a>
-              </button>
             </li>
-          <li class="nav-item" style="margin-left: -20px;">
-            <a class="nav-link" href="{{route('register')}}" tabindex="-1" aria-disabled="true">Sign Up</a>
-          </li>
-          @endif
-          </ul>
+            @else
+                <li class="nav-link">
+                    <a href="{{ route('login') }}" class="nav-link btn btn-md btn-primary mx-2">Login</a>
+                </li>
+                <li class="nav-link" style="margin-left: -20px;">
+                    <a class="nav-link btn btn-outline-primary" href="{{route('register')}}" tabindex="-1" aria-disabled="true">Sign Up</a>
+                </li>
+            @endif
+            </ul>
           </div>
         </div>
       </nav>
