@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\PembelianController;
-
+use App\Http\Controllers\DashboardController;
 
 /* End of file Controllername.php */
 ;
@@ -22,6 +22,11 @@ use App\Http\Controllers\PembelianController;
 Route::get('/', function () {
     return view('home');
 });
+// Route
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
+});
+
 
 //BarangRoute
 Route::get('dashboard', [BarangController::class, 'index'])->name('dashboard');

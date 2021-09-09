@@ -26,18 +26,25 @@
                 <li><a class="dropdown-item" href="#">Sedulur</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <button type="button" class="btn position-relative ms-2">
+          @if (Auth::check() == true)
+          <li class="nav-item">
+              <form method="POST" action="{{route('logout')}}">
+                    @csrf
+                <button type="submit" class="btn btn-sm btn-danger">Logout</a>
+              </form>
+          </li>
+
+          @else
+          <li class="nav-item">
+              <button type="button" class="btn position-relative btn-primary ms-2">
                 <a href="{{ route('login') }}" class="login">Login</a>
-                <span class="position-absolute top-0 start-100 translate-middle">
-                <span class="visually-hidden">New alerts</span>
-                </span>
               </button>
             </li>
-          </ul>
-          <li class="nav-link" style="margin-left: -20px;">
-            <a class="nav-link" href="register.html" tabindex="-1" aria-disabled="true">Sign Up</a>
+          <li class="nav-item" style="margin-left: -20px;">
+            <a class="nav-link" href="{{route('register')}}" tabindex="-1" aria-disabled="true">Sign Up</a>
           </li>
+          @endif
+          </ul>
           </div>
         </div>
       </nav>
