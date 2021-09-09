@@ -60,13 +60,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../foto/img1.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img1.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
         <div class="carousel-item">
-          <img src="../foto/img2.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img2.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
         <div class="carousel-item">
-          <img src="../foto/img3.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img3.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

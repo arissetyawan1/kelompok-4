@@ -36,7 +36,7 @@ class AuthenticatedSessionController extends Controller
         if (Auth::user()->hasRole('penjual')) {
                return view('dashboard');
            }elseif(Auth::user()->hasRole('user')){
-               return view('home');
+               return view('market');
            }
     }
 
