@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/spekproduk.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/spekproduk.css')}}">
     <link rel="stylesheet" type="text/css" href="../awesome/css/all.min.css">
 	<title>Produk</title>
 </head>
@@ -128,7 +128,7 @@
 	    			</div>
 	    			<div class="btn-produk mt-4 ms-2">
 	    				<a href="#" class="btn btn-lg me-2 btn-custom"><i class="fas fa-shopping-cart fs-6 me-2"></i>Masukan Keranjang</a>
-	    				<a href="#" class="btn btn-lg btn-custom my-2">Beli Sekarang</a>
+	    				<a href="{{route('dashboard')}}" class="btn btn-lg btn-custom my-2">Beli Sekarang</a>
 	    			</div>
     			</div>
     		</div>

@@ -154,7 +154,7 @@
                 <i class="far fa-star"></i>
               </div>
               <p class="card-text mt-2">Rp. 600.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+              <a href="{{route('spekproduk')}}" class="btn d-grid">Beli</a>
             </div>
           </div>
         </div>

@@ -31,6 +31,6 @@ class PembelianController extends Controller
     public function destroy(Pembelian $id)
     {
         $id->delete();
-        return redirect()->route('dashboard');
+        return redirect()->route('pembelian');
     }
 }

@@ -19,8 +19,8 @@
                     @foreach ($data as $barang)
                         <tbody>
                             <tr>
-                                <th>{{ $barang->barang_id }}</th>
-                                <td>{{ $barang->user_id }}</td>
+                                <th>{{ $barang->barang_nama }}</th>
+                                <td>{{ $barang->nama_user }}</td>
                                 <td>{{ $barang->jumlah_beli }}</td>
                                 <td>{{ $barang->tanggal_beli }}</td>
                                 <td>{{ $barang->total_harga }}</td>
