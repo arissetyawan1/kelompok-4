@@ -15,10 +15,12 @@ class CreatePembeliansTable extends Migration
     {
         Schema::create('pembelians', function (Blueprint $table) {
             $table->id();
-            $table->integer('barang_id');
-            $table->integer('user_id');
+            $table->string('barang_nama');
+            $table->string('nama_user');
             $table->integer('jumlah_beli');
+            $table->integer('harga');
             $table->date('tanggal_beli');
+            $table->integer('total_harga');
             $table->timestamps();
         });
     }

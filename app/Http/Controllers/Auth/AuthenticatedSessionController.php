@@ -32,12 +32,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
-        if (Auth::user()->hasRole('penjual')) {
-               return view('dashboard');
-           }elseif(Auth::user()->hasRole('user')){
-               return view('market');
-           }
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
