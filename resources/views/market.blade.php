@@ -39,10 +39,10 @@
               <a class="nav-link" href="#">Bantuan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Daftar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+                 <form method="POST" action="{{route('logout')}}">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-danger">Logout</a>
+                </form>
             </li>
           </ul>
         </div>
@@ -60,13 +60,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../foto/img1.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img1.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
         <div class="carousel-item">
-          <img src="../foto/img2.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img2.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
         <div class="carousel-item">
-          <img src="../foto/img3.png" class="d-block img-fluid" alt="iklan">
+          <img src="{{asset('foto/img3.png')}}" class="d-block img-fluid" alt="iklan">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

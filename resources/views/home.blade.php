@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/market.css">
-    <link rel="stylesheet" type="text/css" href="../awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/market.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('awesome/css/all.min.css')}}">
     <title>Home-MASeKO</title>
 </head>
 
@@ -22,13 +22,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../foto/img1.png" class="d-block w-100" alt="iklan">
+            <img src="{{asset('foto/img2.jpg')}}" class="d-block w-100" alt="iklan">
           </div>
           <div class="carousel-item">
-            <img src="../foto/img2.png" class="d-block w-100" alt="iklan">
+            <img src="{{asset('foto/img1.jpg')}}" class="d-block w-100" alt="iklan">
           </div>
           <div class="carousel-item">
-            <img src="../foto/img3.png" class="d-block w-100" alt="iklan">
+            <img src="{{asset('foto/img3.jpg')}}" class="d-block w-100" alt="iklan">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -51,7 +51,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row mt-5 ms-5">
         <div class="col-lg-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+          <svg xmlns="{{url('http://www.w3.org/2000/svg')}}" width="100" height="100" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
             <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
           </svg>
 
@@ -113,7 +113,7 @@
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="col-md-5">
-          <svg><img src="../foto/foto1.png" width="300" height="300" style="margin-top: -150px"></svg>
+          <svg><img src="{{asset('foto/img1.jpg')}}" width="300" height="300" style="margin-top: -150px"></svg>
         </div>
       </div>
 
