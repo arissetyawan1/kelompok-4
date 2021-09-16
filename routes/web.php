@@ -26,6 +26,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 });
+Route::view('home', 'home')->name('home');
 Route::view('market', 'market')->name('market');
 Route::view('spekproduk', 'spekproduk')->name('spekproduk');
 //BarangRoute

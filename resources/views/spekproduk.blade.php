@@ -87,7 +87,7 @@
 				  	</a>
 				  </figcaption>
 
-				</figure>	
+				</figure>
     		</div>
     		<div class="col-lg-7">
     			<h4>Nama Produk</h4>
@@ -150,7 +150,7 @@
           <div class="col-md-6 text-md-end text-center pt-2 pb-2">
             <a href="#" class="text-decoration-none ">
               <img src="../foto/sosialmedia/instagram.png" class="ms-2" style="width: 30px;">
-            </a>  
+            </a>
             <a href="#" class="text-decoration-none">
               <img src="../foto/sosialmedia/twitter.png" class="ms-2" style="width: 30px;">
             </a>
