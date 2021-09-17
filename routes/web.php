@@ -20,17 +20,20 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return redirect()->to(route('market'));
 });
 // Route
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 });
-
+Route::view('home', 'home')->name('home');
 Route::view('market', 'market')->name('market');
+Route::view('spekproduk', 'spekproduk')->name('spekproduk');
 //BarangRoute
-Route::get('dashboard', [BarangController::class, 'index'])->name('dashboard');
-Route::view('form-insert', 'formInsertBarang')->name('insert-barang');
+Route::middleware('auth')->get('dashboard', [BarangController::class, 'index'])->name('dashboard');
+Route::view('insert-barang', 'formInsertBarang')->name('insert-barang');
+
+// Barang CRUD
 Route::post('insert-barang', [BarangController::class, 'store'])->name('barang.insert');
 Route::delete('delete-barang/{id}',[BarangController::class, 'destroy'])->name('delete.barang');
 Route::get('edit-barang/{id}', [BarangController::class, 'edit'])->name('barang.edit');
@@ -40,5 +43,10 @@ Route::put('update-barang/{id}', [BarangController::class, 'update'])->name('bar
 
 //PembelianRoute
 Route::get('pembelian', [PembelianController::class, 'index'])->name('pembelian');
+Route::view('insert-pembelian', 'formInsertPembelian')->name('insert-pembelian');
+
+// CRUD
+Route::post('insert-pembelian', [PembelianController::class, 'store'])->name('pembelian.insert');
+Route::delete('delete-pembelian/{id}', [PembelianController::class, 'destroy'])->name('pembelian.delete');
 require __DIR__.'/auth.php';
 

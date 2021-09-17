@@ -4,52 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/market.css">
-    <link rel="stylesheet" type="text/css" href="../awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/market.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('awesome/css/all.min.css')}}">
     <title>Market | MASeKO</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b7f7d4;">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="../foto/logo.png" alt="" width="50" height="50" class="me-2">
-          MASeKO
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <form class="d-flex ms-auto my-4 my-lg-0">
-            <input class="form-control me-2" type="search" placeholder="Cari Barang" aria-label="Search">
-            <button class="btn" type="submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg>
-            </button>
-          </form>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Keranjang</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Notifikasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bantuan</a>
-            </li>
-            <li class="nav-item">
-                 <form method="POST" action="{{route('logout')}}">
-                    @csrf
-                    <button type="submit" class="btn btn-sm btn-danger">Logout</a>
-                </form>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
 
+<x-navbar></x-navbar>
     <!-- Slide Show -->
     <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="carousel">
@@ -173,11 +134,10 @@
       </div>
     </div>
     <!-- End Kategori -->
-
-    <!-- Produk -->
+     <!-- Lelang -->
     <div class="container mt-2">
       <div class="judul-produk" style="background-color: #fff; padding: 5px 10px">
-        <h5 class="text-center mt-2">Produk</h5>
+        <h5 class="text-center mt-2">Lelang</h5>
       </div>
       <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
@@ -193,7 +153,7 @@
                 <i class="far fa-star"></i>
               </div>
               <p class="card-text mt-2">Rp. 600.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+              <a href="{{route('spekproduk')}}" class="btn d-grid">Beli</a>
             </div>
           </div>
         </div>
@@ -211,7 +171,7 @@
                 <i class="far fa-star"></i>
               </div>
               <p class="card-text mt-2">Rp. 1.200.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+              <a href="{{route('spekproduk')}}" class="btn d-grid">Beli</a>
             </div>
           </div>
         </div>
@@ -287,116 +247,121 @@
             </div>
           </div>
         </div>
+    <!-- End Lelang -->
 
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 7</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 15.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 8</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 110.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 9</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 550.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 10</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 550.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 11</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 150.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
-          <div class="card text-center">
-            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h6 class="card-title">Produk 12</h6>
-              <div class="bintang" style="color: #28f75f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="card-text mt-2">Rp. 800.000</p>
-              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
-            </div>
-          </div>
-        </div>
+    <!-- Produk -->
+    <div class="container mt-2">
+      <div class="judul-produk" style="background-color: #fff; padding: 5px 10px">
+        <h5 class="text-center mt-2">Produk</h5>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 1</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 600.000</p>
+              <a href="{{route('spekproduk')}}" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 2</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 1.200.000</p>
+              <a href="{{route('spekproduk')}}" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 3</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 770.000</p>
+              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 4</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 990.000</p>
+              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 5</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 200.000</p>
+              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+            <img src="../foto/produk/produk.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">Produk 6</h6>
+              <div class="bintang" style="color: #28f75f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="card-text mt-2">Rp. 8.500.000</p>
+              <a href="../pages/spekproduk.html" class="btn d-grid">Beli</a>
+            </div>
+          </div>
+        </div>
     <!-- End Produk -->
 
     <!-- Footer  -->
@@ -413,7 +378,7 @@
           <div class="col-md-6 text-md-end text-center pt-2 pb-2">
             <a href="#" class="text-decoration-none ">
               <img src="../foto/sosialmedia/instagram.png" class="ms-2" style="width: 30px;">
-            </a>  
+            </a>
             <a href="#" class="text-decoration-none">
               <img src="../foto/sosialmedia/twitter.png" class="ms-2" style="width: 30px;">
             </a>
@@ -425,12 +390,12 @@
             </a>
           </div>
 
-          
+
         </div>
       </div>
     </footer>
     <!-- End Footer -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>
